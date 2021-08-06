@@ -1,0 +1,65 @@
+h1 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+  color: #E79EEB;
+  font-family: animeace2_bld;
+}
+
+.comandos {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+.cmd-item {
+  font-family: animeace2_bld;
+  background: linear-gradient(to right, #E79EEB, #B6E4F5);
+  color: #111;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.cmd-item:hover{
+  box-shadow: -10px -10px 5px grey;
+}
+
+.cmd-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.cmd-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+
+.cmd-item-header.active::after {
+  content: "\2212";
+}
+
+.cmd-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.cmd-item-body-content {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 3px solid;
+  border-image: linear-gradient(to right, transparent, #243342, transparent) 1;
+}
+
+@media(max-width:767px) {
+  html {
+    font-size: 14px;
+}
